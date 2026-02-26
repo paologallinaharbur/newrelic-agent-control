@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>newrelic/newrelic-agent-control//.github/renovate-shared-base.json"
+    "github>paologallinaharbur/newrelic-agent-control//.github/renovate-shared-base.json"
   ],
   // `config:recommended` uses `ignoreModulesAndTests`, which ignores **/test/** paths.
   // However, we want to be able to update the k8s version cluster in the `eks_cluster`
