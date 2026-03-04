@@ -1,4 +1,4 @@
-name: 📞 Build container images
+name: ⏯️🚀 Custom Image Build
 
 # This workflow compiles the agent control binary in all supported architectures
 # build the multi-arch image and push it to the repo packages registry.  
