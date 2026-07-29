@@ -111,7 +111,7 @@ serial_test = "3.4.0"
 futures = "0.3.32"
 rcgen = { version = "0.14.7", features = ["crypto"] }
 rstest = { workspace = true }
-tokio-stream = { version = "0.1.18", features = ["net"] }
+tokio-stream = { version = "0.1.19", features = ["net"] }
 
 [build-dependencies]
 glob = "0.3.3"
