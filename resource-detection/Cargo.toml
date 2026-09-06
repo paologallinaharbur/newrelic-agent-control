@@ -19,7 +19,7 @@ fs = { path = "../fs" }
 konst = { workspace = true }
 
 [target.'cfg(windows)'.dependencies]
-windows-link = "0.2.1"
+windows-link = "0.100.0"
 windows-sys = { version = "0.61.2", features = ["Win32_System_Registry"] }
 
 [dev-dependencies]
