@@ -19,7 +19,7 @@ windows-sys = { workspace = true, features = [
   "Win32_Security",
   "Win32_Security_Authorization",
 ] }
-encoding_rs = "0.8.35"
+encoding_rs = "0.8.41"
 
 [dev-dependencies]
 tempfile = { workspace = true }
