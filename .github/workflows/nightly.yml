@@ -53,17 +53,17 @@ jobs:
     needs: [ build-packages ]
     name: Upload packages to testing bucket
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 0
 
-      - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3 # v8
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         with:
           name: built-binaries-0.100.${{ github.run_id }}
           path: ./
 
       - name: Publish deb to S3 action
-        uses: newrelic/infrastructure-publish-action@26d9d8604b2cf2e7343dc287c958e8bbc1a3f750 # v1
+        uses: newrelic/infrastructure-publish-action@3bcecbdc6c7e2e1bd5cc6d06634008cc828ba91a # v1
         with:
           tag: 0.100.${{ github.run_id }}
           app_name: "newrelic-agent-control"
@@ -88,7 +88,7 @@ jobs:
           apt_skip_mirror: true
 
       - name: Publish windows artifacts
-        uses: newrelic/infrastructure-publish-action@26d9d8604b2cf2e7343dc287c958e8bbc1a3f750 # v1
+        uses: newrelic/infrastructure-publish-action@3bcecbdc6c7e2e1bd5cc6d06634008cc828ba91a # v1
         with:
           tag: 0.100.${{ github.run_id }}
           app_name: "newrelic-agent-control"
@@ -177,7 +177,7 @@ jobs:
     if: always()
     needs: [onhost-e2e, k8s-e2e-tests]
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
       - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
