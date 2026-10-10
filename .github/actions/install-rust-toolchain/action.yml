@@ -17,7 +17,7 @@ runs:
         echo "RUST_VERSION=${RUST_VERSION}" >> $GITHUB_ENV
 
     - name: Install Rust ${{ env.RUST_VERSION }}
-      uses: dtolnay/rust-toolchain@efa25f7f19611383d5b0ccf2d1c8914531636bf9 # master
+      uses: dtolnay/rust-toolchain@e2a55d2ffb04f378e9626c28d38b36d230d1e12f # master
       with:
         toolchain: ${{ env.RUST_VERSION }}
         targets: ${{ inputs.targets }}
