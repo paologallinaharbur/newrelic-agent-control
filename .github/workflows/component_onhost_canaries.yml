@@ -60,12 +60,12 @@ jobs:
       contents: read
     steps:
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7 # v6
+        uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: us-east-2
 
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
       - name: Set branch name
         run: |
@@ -76,7 +76,7 @@ jobs:
           echo "GIT_BRANCH=$GIT_BRANCH" >> "$GITHUB_ENV"
 
       - name: Execute operation
-        uses: newrelic/fargate-runner-action@main
+        uses: newrelic/fargate-runner-action@8955938e6043114624462e6cd4e1cbbbcc54a691 # main
         with:
           aws_region: us-east-2
           container_make_target: "AC_CANARY_WINDOWS_PASSWORD=${{ secrets.AC_CANARY_WINDOWS_PASSWORD }} FLEET_ID=${{ inputs.fleet_id }} WINDOWS_FLEET_ID=${{ inputs.windows_fleet_id }} ENVIRONMENT=${{ inputs.environment }} PACKAGE_VERSION=${{ inputs.package_version }} test/onhost-canaries/terraform-${{ inputs.operation }}"
